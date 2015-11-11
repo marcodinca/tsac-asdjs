@@ -1,4 +1,4 @@
-function Ex_10_I(a, b)
+function fillIterativo(a, b)
 {
 	var array = new Array(b);
 	for(var i=0;i<b;i++)

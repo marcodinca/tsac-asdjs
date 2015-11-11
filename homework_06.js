@@ -1,9 +1,9 @@
-function divIterativo(a, b)
+function ex_6_I(a, b)
 {
 	//TODO
 }
 
-function divRicorsivo(a, b)
+function ex_6_R(a, b)
 {
 	//TODO
 }

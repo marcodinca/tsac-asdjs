@@ -13,12 +13,12 @@ function ex_3_R(array, index)
 {
 	if(index==0)
 	{	
-		var sum = array[0]+ex_3_R(array.slice(1,array.length),(index+1));
+		var sum = array[0]+avgRicorsivo(array.slice(1,array.length),(index+1));
 		return sum/10;
 	}
 	else if(index<10)
 	{
-		return array[0]+ex_3_R(array.slice(1,array.length),(index+1));
+		return array[0]+avgRicorsivo(array.slice(1,array.length),(index+1));
 	}
 	else
 	{

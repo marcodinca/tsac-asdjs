@@ -1,4 +1,4 @@
-function ex_11_I(array)
+function orderIterativo(array)
 {
 	var pari = new Array();
 	var dispari = new Array();

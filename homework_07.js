@@ -1,4 +1,4 @@
-function mul(a, b)
+function ex_7_I(a, b)
 {
 	var mul=0;
 	for(var i=0;i<b;i++)
@@ -8,19 +8,14 @@ function mul(a, b)
 	return mul;
 }
 
-function powIterativo(a, b)
+function ex_7_R(a, b)
 {
 	var ris=1;	
 	for(var i=0;i<b;i++)
 	{
-		ris = mul(ris, a);
+		ris = ex_7_R(ris, a);
 	}
 	return ris;
-}
-
-function powRicorsivo(a, b)
-{
-	//TODO
 }
 
 console.log(powIterativo(2,3));

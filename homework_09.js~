@@ -1,4 +1,4 @@
-function ex_9_I(array)
+function invertIterativo(array)
 {
 	var supporto;
 	for(var i=0;i<array.length/2;i++)

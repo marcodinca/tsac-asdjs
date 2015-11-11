@@ -14,7 +14,7 @@ function ex_2_R(n,index)
 {
 	if(index<n)
 	{
-		return (2*index+1)+ex_2_R(n,(index+1));
+		return (2*index+1)+sumRicorsivo(n,(index+1));
 	}
 	else
 	{

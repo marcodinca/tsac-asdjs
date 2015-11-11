@@ -1,4 +1,4 @@
-function ex_5_I(a, b)
+function mulIterativo(a, b)
 {
 	var mul=0;
 	for(var i=0;i<b;i++)
@@ -8,7 +8,7 @@ function ex_5_I(a, b)
 	return mul;
 }
 
-function ex_5_R(a, b)
+function mulRicorsivo(a, b)
 {
 	//TODO
 }

@@ -30,7 +30,7 @@ function ex_1_R(array)
 	}
 	else
 	{
-		return array[0]+ex_1_R(array.slice(1,array.length));
+		return array[0]+sumRicorsivo(array.slice(1,array.length));
 	}
 }
 

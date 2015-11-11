@@ -35,7 +35,8 @@ function ex_4_R(a, b, i)
 	}
 	else
 	{
-		return i+a;
+		return i;
 	}
 }
 
+console.log(ex_4_R(1,4,0));

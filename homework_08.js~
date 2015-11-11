@@ -1,4 +1,4 @@
-function ex_8_R(array, n)
+function fillIterativo(array, n)
 {
 	var ris=new Array(n);
 	for(var i=0;i<n;i++)
