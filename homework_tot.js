@@ -220,7 +220,7 @@ function ex_11_I(array)
 	{
 		for(int j=0;j<dispari.length;j++)	
 		{
-			array
+			//TODO sommare l'array dispari e il pari e ritornare il risultato
 		}
 	}
 }
