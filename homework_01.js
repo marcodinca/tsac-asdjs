@@ -203,24 +203,22 @@ function ex_11_I(array)
 {
 	var pari = new Array();
 	var dispari = new Array();
-	var p=0;
-	var d=0;
 	for(var i=0;i<array.length;i++)
 	{
 		if(array[i]%2==0)
 		{
-			pari[p]=array[i];
+			pari[pari.length]=array[i];
 		}
 		else
 		{
-			dispari[d]=array[i];
+			dispari[dispari.length]=array[i];
 		}
 	}
-	for(var i=0;i<array.length;i++)
+	for(var i=0;i<dispari.length;i++)
 	{
-		for(int j=0;j<dispari.length;j++)	
-		{
-			//TODO sommare l'array dispari e il pari e ritornare il risultato
-		}
+		pari[pari.length]=dispari[i];
 	}
+	return pari;
 }
+
+console.log(ex_11_I([1,4,5,2,7,9,3]));
