@@ -10,76 +10,34 @@ Stack.prototype.isEmpty = function() {return this.array.length==0;}
 function rpn(s)
 {
     var stackN = new Stack();
-    var primoOp = true;
     s = s.split(" ");
-    for(var i=0;i<s.length;i++)
-    {
-        if(s[i]=="+"||s[i]=="-"||s[i]=="*"||s[i]=="/")
-        {
-            if(primoOp)
+    s.forEach( item => {
+            switch(item)
             {
-                primoOp=false;
-                stackN.array.reverse();
+                case "+": 
+			var sup1 = stackN.pop(); 
+			var sup2 = stackN.pop(); 
+			stackN.push(sup2+sup1);
+                    break;
+                case "-": 
+			var sup1 = stackN.pop(); 
+			var sup2 = stackN.pop(); 
+			stackN.push(sup2-sup1);
+                    break;
+                case "*": 
+			var sup1 = stackN.pop(); 
+			var sup2 = stackN.pop(); 
+			stackN.push(sup2*sup1);
+                    break;
+                case "/": 
+			var sup1 = stackN.pop(); 
+			var sup2 = stackN.pop(); 
+			stackN.push(sup2/sup1);
+                    break;
+		default:
+			stackN.push(item);
             }
-            switch(s[i])
-            {
-                case "+": var sup1 = stackN.pop(); var sup2 = stackN.pop(); stackN.push(sup1+sup2);
-                    break;
-                case "-": var sup1 = stackN.pop(); var sup2 = stackN.pop(); stackN.push(sup1-sup2);
-                    break;
-                case "*": var sup1 = stackN.pop(); var sup2 = stackN.pop(); stackN.push(sup1*sup2);
-                    break;
-                case "/": var sup1 = stackN.pop(); var sup2 = stackN.pop(); stackN.push(sup1/sup2);
-                    break;
-            }
-        }
-        else
-        {
-            stackN.push(parseInt(s[i]));
-        }
-    }
-    return stackN.pop();
+    });
+    return stackN.peek();
 }
-/*
- function laroba(s)
- {
- var stackN = new Stack();
- var stackO = new Stack();
- var array = s.split("");
-
- for(var i=0;i<array.length;i++)
- {
- if(array[i]=="+"||array[i]=="*"||array[i]=="-"||array[i]=="/")
- {
- stackO.push(array[i]);
- }
- else
- {
- stackN.push(parseInt(array[i]));
- }
- }
- stackN.array.reverse();
- stackO.array.reverse();
- while(!stackO.isEmpty())
- {
- var n1 = stackN.pop();
- var n2 = stackN.pop();
- var op = stackO.pop();
- var ris;
-
- switch(op)
- {
- case "+": ris=n1+n2;
- break;
- case "-": ris=n1-n2;
- break;
- case "*": ris=n1*n2;
- break;
- case "/": ris=n1/n2;
- break;
- }
- stackN.push(ris);
- }
- return stackN.pop();
- }
- */
+console.log(rpn("3 4 * 2 -"));
