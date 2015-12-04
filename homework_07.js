@@ -1,13 +1,9 @@
 function ex_1_A(a)
 {
     if(a.length==0)
-    {
         return 10;
-    }
     else
-    {
         return 5*a[0]*t(a.splice(1));
-    }
 }
 
 function ex_1_B(a)
